@@ -130,8 +130,9 @@ def addNodeAnomalies(di_graphs, p, k):
 
 def saveGraphToEdgeListTxt(graph, file_name):
     with open(file_name, 'w') as f:
-        f.write('%d\n' % len(graph.nodes))
-        f.write('%d\n' % len(graph.edges))
+        #f.write('%d\n' % len(graph.nodes()))
+        f.write('%d\n' % len([1,2,3]))
+        #f.write('%d\n' % len(graph.edges))
         for i, j, w in graph.edges(data='weight', default=1):
             f.write('%d %d %f\n' % (i, j, w))
 

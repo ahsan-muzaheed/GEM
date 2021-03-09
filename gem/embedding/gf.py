@@ -98,8 +98,21 @@ class GraphFactorization(StaticGraphEmbedding):
                 raise Exception('graph/edge_f needed')
             if edge_f:
                 graph = graph_util.loadGraphFromEdgeListTxt(edge_f)
-            graphFileName = 'gem/intermediate/%s_gf.graph' % self._data_set
-            embFileName = 'gem/intermediate/%s_%d_gf.emb' % (self._data_set, self._d)
+            # graphFileName = 'gem/intermediate/%s_gf.graph' % self._data_set
+            # embFileName = 'gem/intermediate/%s_%d_gf.emb' % (self._data_set, self._d)
+            
+            
+            _data_set="XXXXXX"
+               
+            graphFileName = 'gem/intermediate/%s_gf.graph' % _data_set
+            #graphFileName = 'gem/intermediate/%s_gf.graph' % self._data_set
+            print("xxxxxxxxxxxx:"+graphFileName)
+            #embFileName = 'gem/intermediate/%s_%d_gf.emb' % (self._data_set, self._d)
+            embFileName = 'gem/intermediate/%s_%d_gf.emb' % (_data_set, self._d)
+            print("xxxxxxxxxxxx:"+graphFileName)
+            
+            
+            
             # try:
                 # f = open(graphFileName, 'r')
                 # f.close()
@@ -125,7 +138,7 @@ class GraphFactorization(StaticGraphEmbedding):
                 try:
                     self._X = graph_util.loadEmbedding(embFileName)
                 except FileNotFoundError:
-                    self._X = np.random.randn(len(graph.nodes), self._d)
+                    self._X = np.random.randn(len(graph.nodes()), self._d)
                 t2 = time()
                 try:
                     call(["rm", embFileName])
@@ -135,7 +148,7 @@ class GraphFactorization(StaticGraphEmbedding):
         if not graph:
             graph = graph_util.loadGraphFromEdgeListTxt(edge_f)
         t1 = time()
-        self._node_num = len(graph.nodes)
+        self._node_num = len(graph.nodes())          # (graph.nodes)experiment
         self._X = 0.01 * np.random.randn(self._node_num, self._d)
         for iter_id in range(self._max_iter):
             if not iter_id % self._print_step:

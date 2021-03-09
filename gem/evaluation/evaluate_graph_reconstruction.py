@@ -1,4 +1,4 @@
-try: import cPickle as pickle
+try:import cPickle as pickle
 except: import pickle
 from gem.evaluation import metrics
 from gem.utils import evaluation_util, graph_util
@@ -10,7 +10,7 @@ def evaluateStaticGraphReconstruction(digraph, graph_embedding,
                                       X_stat, node_l=None, file_suffix=None,
                                       sample_ratio_e=None, is_undirected=True,
                                       is_weighted=False):
-    node_num = len(digraph.nodes)
+    node_num = len(digraph.nodes())  #() function
     # evaluation
     if sample_ratio_e:
         eval_edge_pairs = evaluation_util.getRandomEdgePairs(

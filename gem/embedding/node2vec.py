@@ -57,7 +57,8 @@ class node2vec(StaticGraphEmbedding):
 
     def learn_embedding(self, graph=None, edge_f=None,
                         is_weighted=False, no_python=False):
-        args = ["node2vec"]
+        #args = ["node2vec"]
+        args = ["C:\\Users\\Eagle3dStreaming\\Desktop\\GEM\\Snap-6.0-Win32\\node2vec.exe"]
         if not graph and not edge_f:
             raise Exception('graph/edge_f needed')
         if edge_f:

@@ -13,6 +13,8 @@ or
 emplictly you can point to version 3.6.8's path on your cmds
 
 python modules:
+(module name== version )
+
 bleach==1.5.0
 cached-property==1.5.2
 cycler==0.10.0

@@ -67,16 +67,17 @@ this cmd will install all the required version written in requirements.txt(this 
 
 
 
+update node2vec excutable for your OS :
 
 open node2vec.py and find :
 args = ["C:\\Users\\......\\.......\\GEM\\Snap-6.0-Win32\\node2vec.exe"]
 
-update the path based on location of the Gem folder in your local repo so that it will point to the file:
+update the path based on location whre you have kept the  node2vec excutable. for windows i ahve put it  in  the Gem folder :
 ......\GEM\Snap-6.0-Win32\node2vec.exe
 
 
 
-than run in root folder:
+once alldone than  run these cmds in root folder to test if everything ok or not:
 
 python test_karate.py -node2vec 0 
 python test_karate.py -node2vec 1

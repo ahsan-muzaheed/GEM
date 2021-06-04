@@ -1,8 +1,20 @@
+june-3-2021
+
 Operating system tested with :
 windows 
 
 other operating system will work  but you have to collect respective compiled  version for node2vec.
 in this repo for windows we have used the version located in "........\\GEM\\Snap-6.0-Win32\\node2vec.exe"
+
+you can download respective os version here :
+https://snap.stanford.edu/snap/download.html
+
+also i have put backup  here: 
+https://ahsan-nmsu.s3-us-west-1.amazonaws.com/Snap-6.0-Win32.zip
+
+https://ahsan-nmsu.s3-us-west-1.amazonaws.com/Snap-6.0-macOS14.10.tgz
+
+https://ahsan-nmsu.s3-us-west-1.amazonaws.com/Snap-6.0-Ubuntu18.04.tgz
 
 
 requirments:
@@ -13,6 +25,7 @@ or
 emplictly you can point to version 3.6.8's path on your cmds
 
 python modules:
+https://stackoverflow.com/questions/33751214/single-command-in-python-to-install-relevant-modules-from-a-package-json-like-fi
 (module name== version )
 
 bleach==1.5.0

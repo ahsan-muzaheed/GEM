@@ -1,7 +1,7 @@
 Operating system tested with :
 windows 
 
-other operating system will work too but you have to collect respective compiled  version for node2vec.
+other operating system will work  but you have to collect respective compiled  version for node2vec.
 in this repo for windows we have used the version located in "........\\GEM\\Snap-6.0-Win32\\node2vec.exe"
 
 
